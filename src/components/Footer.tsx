@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Phone, Mail, Twitter, Facebook, Linkedin, Youtube, ArrowUp } from 'lucide-react';
+import { Phone, Mail, Twitter, Facebook, Linkedin, Youtube } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from './ui/button';
 

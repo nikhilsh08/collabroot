@@ -1,5 +1,5 @@
 import React from "react";
-import { Check, ArrowUp } from "lucide-react";
+import { Check } from "lucide-react";
 
 interface WorkStep {
   title: string;

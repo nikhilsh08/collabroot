@@ -1,6 +1,7 @@
 import { PhoneCall } from 'lucide-react'
 import React from 'react'
 import { Button } from './ui/button'
+import Image from 'next/image'
 
 const AboutUs = () => {
   return (
@@ -13,10 +14,12 @@ const AboutUs = () => {
             <div className="relative order-2 lg:order-1">
               <div className="bg-white rounded-3xl p-4 max-md:p-2 shadow-lg">
                 <div className="relative rounded-2xl overflow-hidden">
-                  <img 
+                  <Image 
                     src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3h7rztfldswowj7o9zbq.webp"
                     alt="Professional sewing machine with fabric patterns"
                     className="w-full h-80 lg:h-[641.323px]  object-cover"
+                    width={640}
+                    height={480}
                   />
                 </div>
               </div>

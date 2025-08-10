@@ -6,7 +6,6 @@ import {
   Ruler,
   Palette,
   Printer,
-  ArrowDown,
 } from "lucide-react";
 import Image from "next/image";
 
