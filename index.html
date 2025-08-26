@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Consulting | Artificial Intelligence Solutions - CollabRoot</title>
+    <style>
+        :root {
+            /* Modern, accessible color palette */
+            --primary: #2563eb;      /* Modern blue */
+            --primary-dark: #1d4ed8; /* Darker blue for hover */
+            --primary-light: #3b82f6; /* Light blue for accents */
+            --secondary: #059669;     /* Emerald green */
+            --secondary-dark: #047857;
+            --accent: #f59e0b;       /* Amber for highlights */
+            --text-primary: #1f2937; /* Dark gray for main text */
+            --text-secondary: #6b7280; /* Medium gray for secondary text */
+            --text-light: #9ca3af;   /* Light gray */
+            --background: #ffffff;    /* Pure white */
+            --surface: #f8fafc;      /* Light gray surface */
+            --surface-dark: #e2e8f0; /* Darker surface */
+            --border: #e5e7eb;       /* Light border */
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #2563eb 0%, #059669 100%);
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--background);
+        }
+
+        /* Header */
+        .header {
+            background: var(--background);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            background-color: rgba(248, 250, 252, 0.95);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .cta-button {
+            background: var(--gradient-2);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-1);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .brain-icon {
+            width: 200px;
+            height: 200px;
+            margin: 2rem auto;
+            opacity: 0.8;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Why Section */
+        .why-section {
+            background: var(--surface);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .step-number {
+            background: var(--gradient-2);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-header {
+            background: var(--gradient-2);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-content p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .service-content ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Process Section */
+        .process-section {
+            background: var(--surface);
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step::after {
+            content: '';
+            position: absolute;
+            top: 30px;
+            right: -1rem;
+            width: 2rem;
+            height: 2px;
+            background: var(--primary-light);
+            display: none;
+        }
+
+        .process-step:not(:last-child)::after {
+            display: block;
+        }
+
+        .process-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-2);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .process-step h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Industries Section */
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .industry-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary);
+        }
+
+        .industry-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .industry-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .industry-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-2);
+            color: white;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .industry-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .industry-features {
+            list-style: none;
+        }
+
+        .industry-features li {
+            padding: 0.25rem 0;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .industry-features li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient-1);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover, .btn-secondary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 3rem 2rem 1rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-light);
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            line-height: 1.7;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--surface-dark);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .process-step::after {
+                display: none;
+            }
+        }
+
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">CollabRoot</a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#cases">Use Cases</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+            <a href="#contact" class="cta-button">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>AI Consulting and Custom AI Solutions Development</h1>
+            <p>Artificial intelligence consulting and development services that empower you to become a leader in your field</p>
+            
+            <!-- Brain SVG Icon -->
+            <svg class="brain-icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="100" cy="100" r="80" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
+                <path d="M60 80 Q80 60 100 80 Q120 60 140 80" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none"/>
+                <path d="M60 100 Q80 120 100 100 Q120 120 140 100" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none"/>
+                <path d="M70 90 L90 90 M110 90 L130 90" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <path d="M70 110 L90 110 M110 110 L130 110" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+                <circle cx="80" cy="90" r="3" fill="rgba(255,255,255,0.6)"/>
+                <circle cx="120" cy="90" r="3" fill="rgba(255,255,255,0.6)"/>
+                <circle cx="100" cy="100" r="5" fill="rgba(255,255,255,0.7)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Why You Need Consulting Services -->
+    <section class="section why-section">
+        <div class="container">
+            <h2 class="section-title">Why You Need Consulting Services</h2>
+            <p class="section-subtitle">Align your business objectives with the right AI solutions with our consulting services.</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Expert AI Strategy</h3>
+                    <p>We provide expertise to identify and select the right AI business case for your specific needs and goals.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Scalable Tool Selection</h3>
+                    <p>We provide support to select the scalable AI tools for your projects, ensuring long-term success.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Implementation Planning</h3>
+                    <p>We develop a robust plan to implement AI into your business with minimal disruption and maximum impact.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Quality Solutions</h3>
+                    <p>We implement quality-proof AI solutions to help you achieve your business goals efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Consulting Services -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">AI Consulting Services</h2>
+            <p class="section-subtitle">Leverage the best of AI expertise to expand your markets and generate revenue.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">🚀</div>
+                        <h3>New AI Product Development</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Validate your idea at an early stage, minimizing the risks of a project failure and reducing development costs.</p>
+                        <p>Our AI consultants will help you get ready for a successful product launch by identifying the scope of work, selecting appropriate tools and technologies, and estimating the costs and resources.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">⚡</div>
+                        <h3>AI Integration into Existing Product</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Meet market demands and stay ahead of your competitors by strengthening your existing solution with AI.</p>
+                        <p>Let our AI experts do an exploratory analysis, review data processes and IT infrastructure to offer the best solution to empower your business.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Solve Problems -->
+    <section class="section process-section">
+        <div class="container">
+            <h2 class="section-title">How We Solve Problems</h2>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="process-icon">1</div>
+                    <h3>Strategy & Consulting</h3>
+                    <p>Reviewing your current capabilities and business goals to create your digital transformation and AI implementation plan.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">2</div>
+                    <h3>Proof of Value</h3>
+                    <p>Rapidly develop a proof-of-concept (PoC) to validate and confirm the value of AI-driven business cases.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">3</div>
+                    <h3>Minimum Viable Product</h3>
+                    <p>Building an MVP solution to make it available for your customers and allow you to test your product idea and gather customer feedback.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon">4</div>
+                    <h3>Maintenance</h3>
+                    <p>Improvements to ensure product performance, enhance user experience and continuously keep up with the changing environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consulting Services for Businesses -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Consulting Services for Businesses</h2>
+            <p class="section-subtitle">We help you create scalable products and services with intuitive design and robust implementation.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">📊</div>
+                        <h3>Data Science and Analytics</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Our experts in data science and analytics are equipped to help you maximize the potential of your data sources.</p>
+                        <ul>
+                            <li>Data source analysis and optimization</li>
+                            <li>Risk identification and mitigation</li>
+                            <li>Future-proof architecture development</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">🛠️</div>
+                        <h3>Technology Consulting</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Our team of technology experts and AI consultants can help you choose scalable and cost-effective AI tools.</p>
+                        <ul>
+                            <li>Scalable AI tool selection</li>
+                            <li>Technology stack optimization</li>
+                            <li>Cost-effective solution design</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">🔗</div>
+                        <h3>AI Integration</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>We provide support in creating AI implementation plans and develop a Proof-of-Concept (PoC).</p>
+                        <ul>
+                            <li>Implementation planning</li>
+                            <li>Proof-of-Concept development</li>
+                            <li>Integration strategy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <div class="service-icon">🎨</div>
+                        <h3>UI/UX Design</h3>
+                    </div>
+                    <div class="service-content">
+                        <p>Our design specialists can help you develop engaging and intuitive user design for your product ideas.</p>
+                        <ul>
+                            <li>Market research and analysis</li>
+                            <li>User experience optimization</li>
+                            <li>Creative digital experiences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries -->
+    <section class="section why-section">
+        <div class="container">
+            <h2 class="section-title">Implementing AI Across Industries</h2>
+            
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">🚚</div>
+                        <h3>Logistics and Supply Chain</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Order management and freight control</li>
+                        <li>Automated document processing</li>
+                        <li>Price prediction and optimization</li>
+                        <li>Smart inventory management</li>
+                        <li>Non-compliance identification</li>
+                        <li>Goods demand forecasting</li>
+                        <li>Cargo damage detection</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">💰</div>
+                        <h3>Fintech</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Customer service and insights</li>
+                        <li>Customer retention insights</li>
+                        <li>Brand health monitoring</li>
+                        <li>Credit scoring analytics</li>
+                        <li>Crime and fraud prevention</li>
+                        <li>Violent behavior detection</li>
+                        <li>Paper work automation</li>
+                        <li>Secured private data</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">🚗</div>
+                        <h3>Automotive</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Reinforced safety measures on-site</li>
+                        <li>Automated document processing</li>
+                        <li>Automated defect detection</li>
+                        <li>Warehouse capacity planning</li>
+                        <li>Smart design engineering</li>
+                        <li>Predictive maintenance</li>
+                        <li>AI visual inspection</li>
+                        <li>Crash simulation</li>
+                        <li>Fast data analysis</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Work With CollabRoot?</h2>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">⚡</div>
+                    <h3>Flexible Cooperation Models</h3>
+                    <p>We offer flexible terms of cooperation that are the best fit for your business needs and project requirements.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">🚀</div>
+                    <h3>Innovative Approach</h3>
+                    <p>The use of the latest tools and technologies with innovative approaches to solve complex business challenges.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">🎯</div>
+                    <h3>Extensive Experience</h3>
+                    <p>Extensive experience and deep domain know-how in ML and AI development across various industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- World-Class Team Section -->
+    <section class="section why-section">
+        <div class="container">
+            <h2 class="section-title">World-Class Data Scientists and Machine Learning Consultants</h2>
+            <p class="section-subtitle">We cooperate with businesses of all sizes, from startups to large enterprises. Our experience tells us that, regardless of the size of a company, business owners face similar challenges when planning new data initiatives.</p>
+            
+            <div class="step-card" style="max-width: 800px; margin: 2rem auto;">
+                <p>Our clients either don't have their own data science teams, or their team is too small to cope with all the tasks in the environment of a fast-growing company.</p>
+                <p>With CollabRoot, you'll save time on looking for top-notch specialists. Our team of world-class data scientists, AI consultants, advisors, and ML engineers will bring consultancy, technical know-how to your project from day one.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Expertise -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Tech Expertise Matrix</h2>
+            <p class="section-subtitle">To develop artificial intelligence solutions, we use the best technologies available on the market, and we continually enrich our tech stack.</p>
+            
+            <div class="industries-grid">
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">🧠</div>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Supervised Learning</li>
+                        <li>Unsupervised Learning</li>
+                        <li>Reinforcement Learning</li>
+                        <li>Deep Learning</li>
+                        <li>Neural Networks</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">💬</div>
+                        <h3>Natural Language Processing</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Text Analytics</li>
+                        <li>Sentiment Analysis</li>
+                        <li>Language Translation</li>
+                        <li>Chatbots & Virtual Assistants</li>
+                        <li>Document Processing</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">👁️</div>
+                        <h3>Computer Vision</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Image Recognition</li>
+                        <li>Object Detection</li>
+                        <li>Facial Recognition</li>
+                        <li>Medical Image Analysis</li>
+                        <li>Quality Inspection</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">📊</div>
+                        <h3>Data Analytics</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Predictive Analytics</li>
+                        <li>Business Intelligence</li>
+                        <li>Data Visualization</li>
+                        <li>Statistical Analysis</li>
+                        <li>Real-time Analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section why-section">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                    <div class="faq-question" style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
+                        When should I consider AI for my business?
+                    </div>
+                    <div class="faq-answer" style="padding: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+                        A business problem can be solved with the help of AI. AI can be the right technology to analyze, monitor, predict, and automate a variety of business processes.
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                    <div class="faq-question" style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
+                        What AI technologies do you work with?
+                    </div>
+                    <div class="faq-answer" style="padding: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+                        We work with machine learning (supervised, unsupervised, reinforcement learning), deep learning, neural networks, and natural language processing technologies.
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                    <div class="faq-question" style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
+                        How does an AI consultant help my business?
+                    </div>
+                    <div class="faq-answer" style="padding: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+                        An AI consultant helps address the problem with technology according to the client's business needs and pain points, providing strategic guidance and technical expertise.
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                    <div class="faq-question" style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
+                        What's the typical cost range for AI projects?
+                    </div>
+                    <div class="faq-answer" style="padding: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
+                        The price depends on the complexity of the project, and can range from anywhere $10,000 to $250,000, depending on scope and requirements.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Looking for a trusted AI and Machine Learning partner?</h2>
+            <p>Drop us a line to start your project today! As a leading AI firm, we will help you build a solution based on AI or breakthrough technologies like ChatGPT or LLMs.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Get Started</a>
+                <a href="#" class="btn-secondary">Schedule Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CollabRoot</h3>
+                <p>Leading AI consulting and development company helping businesses transform through artificial intelligence.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Services</h3>
+                <a href="#" style="display: block; margin-bottom: 0.5rem;">AI Consulting</a>
+                <a href="#" style="display: block; margin-bottom: 0.5rem;">Machine Learning</a>
+                <a href="#" style="display: block; margin-bottom: 0.5rem;">Data Science</a>
+                <a href="#" style="display: block; margin-bottom: 0.5rem;">AI Integration</a>
+            </div>
+            <div class="footer-section">
+                <h3>Industries</h3>
+                <a href="#" style="display: block; margin-bottom: 0.5rem;">Healthcare</a>
+                <a href="#" style="display: block; margin-bottom: 0.5rem;">Finance</a>
+                <a href="#" style="display: block; margin-bottom: 0.5rem;">E-commerce</a>
+                <a href="#" style="display: block; margin-bottom: 0.5rem;">Manufacturing</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: hello@collabroot.com</p>
+                <p>Phone: +1 (555) 123-4567</p>
+                <p>Address: 123 AI Street, Tech City, TC 12345</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CollabRoot. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isVisible = answer.style.display === 'block';
+                
+                // Hide all answers
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                
+                // Show clicked answer if it wasn't visible
+                if (!isVisible) {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = 'rgba(248, 250, 252, 0.95)';
+                header.style.backdropFilter = 'blur(20px)';
+            } else {
+                header.style.backgroundColor = 'rgba(248, 250, 252, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards for animation
+        document.querySelectorAll('.step-card, .service-card, .industry-card, .process-step').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>">
+                        <!-- <div class="industry-icon">📈</div>
+                        <h3>Marketing and Advertising</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Campaign performance forecasting</li>
+                        <li>Customer churn prediction</li>
+                        <li>Personalized advertising</li>
+                        <li>AI-led price optimization</li>
+                        <li>Demand forecasting</li>
+                        <li>Lead identification</li>
+                        <li>Sentiment analysis</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">🛒</div>
+                        <h3>E-commerce and Retail</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>AR visual effects and immersiveness</li>
+                        <li>Client segmentation and retargeting</li>
+                        <li>Efficient customer data analysis</li>
+                        <li>Accurate AI-based visual search</li>
+                        <li>Improved customer experience</li>
+                        <li>Brand health monitoring</li>
+                        <li>Shoplifting prevention</li>
+                    </ul>
+                </div>
+                
+                <div class="industry-card">
+                    <div class="industry-header">
+                        <div class="industry-icon">🏥</div>
+                        <h3>Healthcare and Wellness</h3>
+                    </div>
+                    <ul class="industry-features">
+                        <li>Business process optimization</li>
+                        <li>High-risk patient identification</li>
+                        <li>Accurate anomaly detection</li>
+                        <li>Chronic disease prevention</li>
+                        <li>Personalized treatment</li>
+                        <li>Medical image analysis</li>
+                        <li>Touchless authentication</li>
+                    </ul>
+                </div>
+                </
+                
+                <div class="industry-card">
+                    <div class="industry-header">
