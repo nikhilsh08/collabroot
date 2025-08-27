@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Consulting | Artificial Intelligence Solutions - CollabRoot</title>
+
+    <!-- Favicon using inline SVG -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180.92 181.46'%3e%3cdefs%3e%3clinearGradient id='customGradient' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3e%3cstop offset='0%25' stop-color='%232563eb' /%3e%3cstop offset='100%25' stop-color='%23059669' /%3e%3c/linearGradient%3e%3c/defs%3e%3cpath d='M113.61 34.23c0 9.33.19 18.67-.07 28-.13 4.35 1.28 5.79 5.69 5.75 18.49-.21 37 0 55.48-.18 4.86-.06 6.32 1.58 6.2 6.32-.28 11.49-.21 23 0 34.48.07 4.07-1.3 5.77-5.44 5.63-5.66-.18-11.33 0-17 0-2.33 0-4.19.52-5.22 3s.12 4.1 1.74 5.7c4.38 4.34 8.66 8.78 13.11 13.05 2 1.94 2 3.4 0 5.37q-13.51 13.33-26.85 26.86c-2.23 2.27-3.89 2.45-6.17.05-4.24-4.47-8.75-8.68-13.09-13.05-1.5-1.52-2.88-2.56-5.23-1.58s-3.2 2.55-3.16 5c.09 5.83-.11 11.66.05 17.49.11 3.74-1.13 5.45-5.15 5.4q-18-.26-36 0c-3.83.05-5.46-1.27-5.32-5.21.2-5.66 0-11.33.07-17 .06-2.76-.56-4.67-3.43-5.85s-4 .42-5.55 2c-4.24 4.24-8.56 8.41-12.67 12.77-2 2.13-3.53 2.48-5.73.24q-13.5-13.71-27.22-27.21c-2.11-2.07-1.67-3.53.24-5.37 4.2-4 8.25-8.24 12.37-12.37 1.77-1.77 3.68-3.35 2.3-6.42s-3.82-2.79-6.31-2.81c-5.5 0-11-.08-16.49 0-3.31 0-4.79-1.25-4.76-4.75Q.2 90.7 0 72c0-3 1.11-4.15 4.09-4.09 6 .11 12 0 18 0 2.6 0 4.41-.63 5.49-3.26s-.18-4.1-1.79-5.65c-4.36-4.34-8.61-8.81-13.09-13.05-2.33-2.21-1.8-3.77.22-5.76q13.52-13.4 26.85-26.92c2.16-2.2 3.72-2.06 5.77.08 4.26 4.46 8.72 8.72 13 13.11 1.62 1.64 3.11 2.77 5.66 1.61s3-2.77 3-5.15c0-5.83.13-11.67 0-17.49C67.08 1.65 68.37 0 72.35 0c12 .14 24 .17 36 0 4.3-.07 5.41 1.84 5.34 5.75-.19 9.49-.08 18.99-.08 28.48zM98.39 69.11h-8.48c-12.6.29-21.44 9.49-21.31 22.15a21.83 21.83 0 0 0 43.65.27c.15-6.15-.06-12.31.08-18.46.07-2.93-.77-4.3-4-4.06s-6.61.1-9.94.1z' fill='url(%23customGradient)' /%3e%3c/svg%3e">
+
+    <!-- Fallback favicon for older browsers -->
+    <link rel="shortcut icon"
+        href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180.92 181.46'%3e%3cpath d='M113.61 34.23c0 9.33.19 18.67-.07 28-.13 4.35 1.28 5.79 5.69 5.75 18.49-.21 37 0 55.48-.18 4.86-.06 6.32 1.58 6.2 6.32-.28 11.49-.21 23 0 34.48.07 4.07-1.3 5.77-5.44 5.63-5.66-.18-11.33 0-17 0-2.33 0-4.19.52-5.22 3s.12 4.1 1.74 5.7c4.38 4.34 8.66 8.78 13.11 13.05 2 1.94 2 3.4 0 5.37q-13.51 13.33-26.85 26.86c-2.23 2.27-3.89 2.45-6.17.05-4.24-4.47-8.75-8.68-13.09-13.05-1.5-1.52-2.88-2.56-5.23-1.58s-3.2 2.55-3.16 5c.09 5.83-.11 11.66.05 17.49.11 3.74-1.13 5.45-5.15 5.4q-18-.26-36 0c-3.83.05-5.46-1.27-5.32-5.21.2-5.66 0-11.33.07-17 .06-2.76-.56-4.67-3.43-5.85s-4 .42-5.55 2c-4.24 4.24-8.56 8.41-12.67 12.77-2 2.13-3.53 2.48-5.73.24q-13.5-13.71-27.22-27.21c-2.11-2.07-1.67-3.53.24-5.37 4.2-4 8.25-8.24 12.37-12.37 1.77-1.77 3.68-3.35 2.3-6.42s-3.82-2.79-6.31-2.81c-5.5 0-11-.08-16.49 0-3.31 0-4.79-1.25-4.76-4.75Q.2 90.7 0 72c0-3 1.11-4.15 4.09-4.09 6 .11 12 0 18 0 2.6 0 4.41-.63 5.49-3.26s-.18-4.1-1.79-5.65c-4.36-4.34-8.61-8.81-13.09-13.05-2.33-2.21-1.8-3.77.22-5.76q13.52-13.4 26.85-26.92c2.16-2.2 3.72-2.06 5.77.08 4.26 4.46 8.72 8.72 13 13.11 1.62 1.64 3.11 2.77 5.66 1.61s3-2.77 3-5.15c0-5.83.13-11.67 0-17.49C67.08 1.65 68.37 0 72.35 0c12 .14 24 .17 36 0 4.3-.07 5.41 1.84 5.34 5.75-.19 9.49-.08 18.99-.08 28.48zM98.39 69.11h-8.48c-12.6.29-21.44 9.49-21.31 22.15a21.83 21.83 0 0 0 43.65.27c.15-6.15-.06-12.31.08-18.46.07-2.93-.77-4.3-4-4.06s-6.61.1-9.94.1z' fill='%232563eb' /%3e%3c/svg%3e">
     <style>
         :root {
             /* Modern, accessible color palette */
-            --primary: #2563eb;      /* Modern blue */
-            --primary-dark: #1d4ed8; /* Darker blue for hover */
-            --primary-light: #3b82f6; /* Light blue for accents */
-            --secondary: #059669;     /* Emerald green */
+            --primary: #2563eb;
+            /* Modern blue */
+            --primary-dark: #1d4ed8;
+            /* Darker blue for hover */
+            --primary-light: #3b82f6;
+            /* Light blue for accents */
+            --secondary: #059669;
+            /* Emerald green */
             --secondary-dark: #047857;
-            --accent: #f59e0b;       /* Amber for highlights */
-            --text-primary: #1f2937; /* Dark gray for main text */
-            --text-secondary: #6b7280; /* Medium gray for secondary text */
-            --text-light: #9ca3af;   /* Light gray */
-            --background: #ffffff;    /* Pure white */
-            --surface: #f8fafc;      /* Light gray surface */
-            --surface-dark: #e2e8f0; /* Darker surface */
-            --border: #e5e7eb;       /* Light border */
+            --accent: #f59e0b;
+            /* Amber for highlights */
+            --text-primary: #1f2937;
+            /* Dark gray for main text */
+            --text-secondary: #6b7280;
+            /* Medium gray for secondary text */
+            --text-light: #9ca3af;
+            /* Light gray */
+            --background: #ffffff;
+            /* Pure white */
+            --surface: #f8fafc;
+            /* Light gray surface */
+            --surface-dark: #e2e8f0;
+            /* Darker surface */
+            --border: #e5e7eb;
+            /* Light border */
             --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             --gradient-2: linear-gradient(135deg, #2563eb 0%, #059669 100%);
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
@@ -59,6 +80,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 1rem 2rem;
+            min-width: min-content;
         }
 
         .logo {
@@ -170,8 +192,15 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         /* Section Styling */
@@ -503,7 +532,8 @@
             transition: all 0.3s ease;
         }
 
-        .btn-primary:hover, .btn-secondary:hover {
+        .btn-primary:hover,
+        .btn-secondary:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
         }
@@ -536,7 +566,8 @@
             color: var(--primary-light);
         }
 
-        .footer-section p, .footer-section a {
+        .footer-section p,
+        .footer-section a {
             color: var(--text-light);
             text-decoration: none;
             line-height: 1.7;
@@ -581,6 +612,100 @@
             }
         }
 
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            min-width: 120px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-benefits {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.25rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .benefit-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-stats {
+                gap: 1.5rem;
+            }
+
+            .stat-item {
+                padding: 1rem;
+                min-width: 100px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .hero-benefits {
+                gap: 1rem;
+            }
+
+            .benefit-item {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
         /* Accessibility improvements */
         @media (prefers-reduced-motion: reduce) {
             * {
@@ -590,6 +715,20 @@
             }
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            min-width: min-content;
+            gap: 2px;
+        }
+
+        .logo-container svg {
+            width: 34px;
+            height: 34px;
+            flex-shrink: 0;
+            /* keep logo from shrinking */
+        }
+
         /* Focus styles for accessibility */
         *:focus {
             outline: 2px solid var(--accent);
@@ -597,11 +736,29 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav-container">
-            <a href="#" class="logo">CollabRoot</a>
+            <div class="logo-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180.92 181.46">
+                    <defs>
+                        <!-- Your custom gradient -->
+                        <linearGradient id="customGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#2563eb" />
+                            <stop offset="100%" stop-color="#059669" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Apply gradient -->
+                    <path
+                        d="M113.61 34.23c0 9.33.19 18.67-.07 28-.13 4.35 1.28 5.79 5.69 5.75 18.49-.21 37 0 55.48-.18 4.86-.06 6.32 1.58 6.2 6.32-.28 11.49-.21 23 0 34.48.07 4.07-1.3 5.77-5.44 5.63-5.66-.18-11.33 0-17 0-2.33 0-4.19.52-5.22 3s.12 4.1 1.74 5.7c4.38 4.34 8.66 8.78 13.11 13.05 2 1.94 2 3.4 0 5.37q-13.51 13.33-26.85 26.86c-2.23 2.27-3.89 2.45-6.17.05-4.24-4.47-8.75-8.68-13.09-13.05-1.5-1.52-2.88-2.56-5.23-1.58s-3.2 2.55-3.16 5c.09 5.83-.11 11.66.05 17.49.11 3.74-1.13 5.45-5.15 5.4q-18-.26-36 0c-3.83.05-5.46-1.27-5.32-5.21.2-5.66 0-11.33.07-17 .06-2.76-.56-4.67-3.43-5.85s-4 .42-5.55 2c-4.24 4.24-8.56 8.41-12.67 12.77-2 2.13-3.53 2.48-5.73.24q-13.5-13.71-27.22-27.21c-2.11-2.07-1.67-3.53.24-5.37 4.2-4 8.25-8.24 12.37-12.37 1.77-1.77 3.68-3.35 2.3-6.42s-3.82-2.79-6.31-2.81c-5.5 0-11-.08-16.49 0-3.31 0-4.79-1.25-4.76-4.75Q.2 90.7 0 72c0-3 1.11-4.15 4.09-4.09 6 .11 12 0 18 0 2.6 0 4.41-.63 5.49-3.26s-.18-4.1-1.79-5.65c-4.36-4.34-8.61-8.81-13.09-13.05-2.33-2.21-1.8-3.77.22-5.76q13.52-13.4 26.85-26.92c2.16-2.2 3.72-2.06 5.77.08 4.26 4.46 8.72 8.72 13 13.11 1.62 1.64 3.11 2.77 5.66 1.61s3-2.77 3-5.15c0-5.83.13-11.67 0-17.49C67.08 1.65 68.37 0 72.35 0c12 .14 24 .17 36 0 4.3-.07 5.41 1.84 5.34 5.75-.19 9.49-.08 18.99-.08 28.48zM98.39 69.11h-8.48c-12.6.29-21.44 9.49-21.31 22.15a21.83 21.83 0 0 0 43.65.27c.15-6.15-.06-12.31.08-18.46.07-2.93-.77-4.3-4-4.06s-6.61.1-9.94.1z"
+                        fill="url(#customGradient)" />
+                </svg>
+
+                <a href="#" class="logo">CollabRoot</a>
+            </div>
             <ul class="nav-menu">
                 <li><a href="#why-consulting">Why AI</a></li>
                 <li><a href="#services">Services</a></li>
@@ -617,20 +774,49 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-container">
-            <h1>AI Consulting and Custom AI Solutions Development</h1>
-            <p>Artificial intelligence consulting and development services that empower you to become a leader in your field</p>
-            
-            <!-- Brain SVG Icon -->
-            <svg class="brain-icon" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="100" cy="100" r="80" stroke="rgba(255,255,255,0.3)" stroke-width="2" fill="none"/>
-                <path d="M60 80 Q80 60 100 80 Q120 60 140 80" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none"/>
-                <path d="M60 100 Q80 120 100 100 Q120 120 140 100" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none"/>
-                <path d="M70 90 L90 90 M110 90 L130 90" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
-                <path d="M70 110 L90 110 M110 110 L130 110" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
-                <circle cx="80" cy="90" r="3" fill="rgba(255,255,255,0.6)"/>
-                <circle cx="120" cy="90" r="3" fill="rgba(255,255,255,0.6)"/>
-                <circle cx="100" cy="100" r="5" fill="rgba(255,255,255,0.7)"/>
-            </svg>
+            <h1>Transform Your Business with AI Solutions That Deliver Results</h1>
+            <p>CollabRoot empowers organizations to harness artificial intelligence through strategic consulting, custom
+                development, and seamless integration. From concept to implementation, we turn your data into
+                competitive advantage.</p>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Years of AI Expertise</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Successful Projects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Enterprise Clients</div>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#contact" class="btn-primary">Start Your AI Journey</a>
+                <a href="#services" class="btn-secondary">Explore Solutions</a>
+            </div>
+
+            <div class="hero-benefits">
+                <div class="benefit-item">
+                    <span class="benefit-icon">🚀</span>
+                    <span>Accelerate Growth</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">💡</span>
+                    <span>Drive Innovation</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">📊</span>
+                    <span>Data-Driven Decisions</span>
+                </div>
+                <div class="benefit-item">
+                    <span class="benefit-icon">⚡</span>
+                    <span>Operational Excellence</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -638,23 +824,27 @@
     <section id="why-consulting" class="section why-section">
         <div class="container">
             <h2 class="section-title">Why You Need Consulting Services</h2>
-            <p class="section-subtitle">Align your business objectives with the right AI solutions with our consulting services.</p>
-            
+            <p class="section-subtitle">Align your business objectives with the right AI solutions with our consulting
+                services.</p>
+
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
                     <h3>Expert AI Strategy</h3>
-                    <p>We provide expertise to identify and select the right AI business case for your specific needs and goals.</p>
+                    <p>We provide expertise to identify and select the right AI business case for your specific needs
+                        and goals.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">2</div>
                     <h3>Scalable Tool Selection</h3>
-                    <p>We provide support to select the scalable AI tools for your projects, ensuring long-term success.</p>
+                    <p>We provide support to select the scalable AI tools for your projects, ensuring long-term success.
+                    </p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">3</div>
                     <h3>Implementation Planning</h3>
-                    <p>We develop a robust plan to implement AI into your business with minimal disruption and maximum impact.</p>
+                    <p>We develop a robust plan to implement AI into your business with minimal disruption and maximum
+                        impact.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">4</div>
@@ -669,8 +859,9 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">AI Consulting Services</h2>
-            <p class="section-subtitle">Leverage the best of AI expertise to expand your markets and generate revenue.</p>
-            
+            <p class="section-subtitle">Leverage the best of AI expertise to expand your markets and generate revenue.
+            </p>
+
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-header">
@@ -678,19 +869,24 @@
                         <h3>New AI Product Development</h3>
                     </div>
                     <div class="service-content">
-                        <p>Validate your idea at an early stage, minimizing the risks of a project failure and reducing development costs.</p>
-                        <p>Our AI consultants will help you get ready for a successful product launch by identifying the scope of work, selecting appropriate tools and technologies, and estimating the costs and resources.</p>
+                        <p>Validate your idea at an early stage, minimizing the risks of a project failure and reducing
+                            development costs.</p>
+                        <p>Our AI consultants will help you get ready for a successful product launch by identifying the
+                            scope of work, selecting appropriate tools and technologies, and estimating the costs and
+                            resources.</p>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">⚡</div>
                         <h3>AI Integration into Existing Product</h3>
                     </div>
                     <div class="service-content">
-                        <p>Meet market demands and stay ahead of your competitors by strengthening your existing solution with AI.</p>
-                        <p>Let our AI experts do an exploratory analysis, review data processes and IT infrastructure to offer the best solution to empower your business.</p>
+                        <p>Meet market demands and stay ahead of your competitors by strengthening your existing
+                            solution with AI.</p>
+                        <p>Let our AI experts do an exploratory analysis, review data processes and IT infrastructure to
+                            offer the best solution to empower your business.</p>
                     </div>
                 </div>
             </div>
@@ -701,38 +897,43 @@
     <section id="process" class="section process-section">
         <div class="container">
             <h2 class="section-title">How We Solve Problems</h2>
-            
+
             <div class="process-grid">
                 <div class="process-step">
                     <div class="process-icon">1</div>
                     <h3>Strategy & Consulting</h3>
-                    <p>Reviewing your current capabilities and business goals to create your digital transformation and AI implementation plan.</p>
+                    <p>Reviewing your current capabilities and business goals to create your digital transformation and
+                        AI implementation plan.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-icon">2</div>
                     <h3>Proof of Value</h3>
-                    <p>Rapidly develop a proof-of-concept (PoC) to validate and confirm the value of AI-driven business cases.</p>
+                    <p>Rapidly develop a proof-of-concept (PoC) to validate and confirm the value of AI-driven business
+                        cases.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-icon">3</div>
                     <h3>Minimum Viable Product</h3>
-                    <p>Building an MVP solution to make it available for your customers and allow you to test your product idea and gather customer feedback.</p>
+                    <p>Building an MVP solution to make it available for your customers and allow you to test your
+                        product idea and gather customer feedback.</p>
                 </div>
                 <div class="process-step">
                     <div class="process-icon">4</div>
                     <h3>Maintenance</h3>
-                    <p>Improvements to ensure product performance, enhance user experience and continuously keep up with the changing environment.</p>
+                    <p>Improvements to ensure product performance, enhance user experience and continuously keep up with
+                        the changing environment.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Consulting Services for Businesses -->
-    <section id="" class="section">
+    <section id="services" class="section">
         <div class="container">
             <h2 class="section-title">Consulting Services for Businesses</h2>
-            <p class="section-subtitle">We help you create scalable products and services with intuitive design and robust implementation.</p>
-            
+            <p class="section-subtitle">We help you create scalable products and services with intuitive design and
+                robust implementation.</p>
+
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-header">
@@ -740,7 +941,8 @@
                         <h3>Data Science and Analytics</h3>
                     </div>
                     <div class="service-content">
-                        <p>Our experts in data science and analytics are equipped to help you maximize the potential of your data sources.</p>
+                        <p>Our experts in data science and analytics are equipped to help you maximize the potential of
+                            your data sources.</p>
                         <ul>
                             <li>Data source analysis and optimization</li>
                             <li>Risk identification and mitigation</li>
@@ -748,14 +950,15 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">🛠️</div>
                         <h3>Technology Consulting</h3>
                     </div>
                     <div class="service-content">
-                        <p>Our team of technology experts and AI consultants can help you choose scalable and cost-effective AI tools.</p>
+                        <p>Our team of technology experts and AI consultants can help you choose scalable and
+                            cost-effective AI tools.</p>
                         <ul>
                             <li>Scalable AI tool selection</li>
                             <li>Technology stack optimization</li>
@@ -763,14 +966,15 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">🔗</div>
                         <h3>AI Integration</h3>
                     </div>
                     <div class="service-content">
-                        <p>We provide support in creating AI implementation plans and develop a Proof-of-Concept (PoC).</p>
+                        <p>We provide support in creating AI implementation plans and develop a Proof-of-Concept (PoC).
+                        </p>
                         <ul>
                             <li>Implementation planning</li>
                             <li>Proof-of-Concept development</li>
@@ -778,14 +982,15 @@
                         </ul>
                     </div>
                 </div>
-                
+
                 <div class="service-card">
                     <div class="service-header">
                         <div class="service-icon">🎨</div>
                         <h3>UI/UX Design</h3>
                     </div>
                     <div class="service-content">
-                        <p>Our design specialists can help you develop engaging and intuitive user design for your product ideas.</p>
+                        <p>Our design specialists can help you develop engaging and intuitive user design for your
+                            product ideas.</p>
                         <ul>
                             <li>Market research and analysis</li>
                             <li>User experience optimization</li>
@@ -801,7 +1006,7 @@
     <section id="industries" class="section why-section">
         <div class="container">
             <h2 class="section-title">Implementing AI Across Industries</h2>
-            
+
             <div class="industries-grid">
                 <div class="industry-card">
                     <div class="industry-header">
@@ -818,7 +1023,7 @@
                         <li>Cargo damage detection</li>
                     </ul>
                 </div>
-                
+
                 <div class="industry-card">
                     <div class="industry-header">
                         <div class="industry-icon">💰</div>
@@ -835,7 +1040,7 @@
                         <li>Secured private data</li>
                     </ul>
                 </div>
-                
+
                 <div class="industry-card">
                     <div class="industry-header">
                         <div class="industry-icon">🚗</div>
@@ -861,36 +1066,44 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title">Why Work With CollabRoot?</h2>
-            
+
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">⚡</div>
                     <h3>Flexible Cooperation Models</h3>
-                    <p>We offer flexible terms of cooperation that are the best fit for your business needs and project requirements.</p>
+                    <p>We offer flexible terms of cooperation that are the best fit for your business needs and project
+                        requirements.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">🚀</div>
                     <h3>Innovative Approach</h3>
-                    <p>The use of the latest tools and technologies with innovative approaches to solve complex business challenges.</p>
+                    <p>The use of the latest tools and technologies with innovative approaches to solve complex business
+                        challenges.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">🎯</div>
                     <h3>Extensive Experience</h3>
-                    <p>Extensive experience and deep domain know-how in ML and AI development across various industries.</p>
+                    <p>Extensive experience and deep domain know-how in ML and AI development across various industries.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- World-Class Team Section -->
-    <section  class="section why-section">
+    <section class="section why-section">
         <div class="container">
             <h2 class="section-title">World-Class Data Scientists and Machine Learning Consultants</h2>
-            <p class="section-subtitle">We cooperate with businesses of all sizes, from startups to large enterprises. Our experience tells us that, regardless of the size of a company, business owners face similar challenges when planning new data initiatives.</p>
-            
+            <p class="section-subtitle">We cooperate with businesses of all sizes, from startups to large enterprises.
+                Our experience tells us that, regardless of the size of a company, business owners face similar
+                challenges when planning new data initiatives.</p>
+
             <div class="step-card" style="max-width: 800px; margin: 2rem auto;">
-                <p>Our clients either don't have their own data science teams, or their team is too small to cope with all the tasks in the environment of a fast-growing company.</p>
-                <p>With CollabRoot, you'll save time on looking for top-notch specialists. Our team of world-class data scientists, AI consultants, advisors, and ML engineers will bring consultancy, technical know-how to your project from day one.</p>
+                <p>Our clients either don't have their own data science teams, or their team is too small to cope with
+                    all the tasks in the environment of a fast-growing company.</p>
+                <p>With CollabRoot, you'll save time on looking for top-notch specialists. Our team of world-class data
+                    scientists, AI consultants, advisors, and ML engineers will bring consultancy, technical know-how to
+                    your project from day one.</p>
             </div>
         </div>
     </section>
@@ -899,8 +1112,9 @@
     <section id="expertise" class="section">
         <div class="container">
             <h2 class="section-title">Our Tech Expertise Matrix</h2>
-            <p class="section-subtitle">To develop artificial intelligence solutions, we use the best technologies available on the market, and we continually enrich our tech stack.</p>
-            
+            <p class="section-subtitle">To develop artificial intelligence solutions, we use the best technologies
+                available on the market, and we continually enrich our tech stack.</p>
+
             <div class="industries-grid">
                 <div class="industry-card">
                     <div class="industry-header">
@@ -915,7 +1129,7 @@
                         <li>Neural Networks</li>
                     </ul>
                 </div>
-                
+
                 <div class="industry-card">
                     <div class="industry-header">
                         <div class="industry-icon">💬</div>
@@ -929,7 +1143,7 @@
                         <li>Document Processing</li>
                     </ul>
                 </div>
-                
+
                 <div class="industry-card">
                     <div class="industry-header">
                         <div class="industry-icon">👁️</div>
@@ -943,7 +1157,7 @@
                         <li>Quality Inspection</li>
                     </ul>
                 </div>
-                
+
                 <div class="industry-card">
                     <div class="industry-header">
                         <div class="industry-icon">📊</div>
@@ -965,41 +1179,53 @@
     <section id="faq" class="section why-section">
         <div class="container">
             <h2 class="section-title">Frequently Asked Questions</h2>
-            
+
             <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
-                    <div class="faq-question" style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
+                <div class="faq-item"
+                    style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                    <div class="faq-question"
+                        style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
                         When should I consider AI for my business?
                     </div>
                     <div class="faq-answer" style="padding: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
-                        A business problem can be solved with the help of AI. AI can be the right technology to analyze, monitor, predict, and automate a variety of business processes.
+                        A business problem can be solved with the help of AI. AI can be the right technology to analyze,
+                        monitor, predict, and automate a variety of business processes.
                     </div>
                 </div>
-                
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
-                    <div class="faq-question" style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
+
+                <div class="faq-item"
+                    style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                    <div class="faq-question"
+                        style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
                         What AI technologies do you work with?
                     </div>
                     <div class="faq-answer" style="padding: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
-                        We work with machine learning (supervised, unsupervised, reinforcement learning), deep learning, neural networks, and natural language processing technologies.
+                        We work with machine learning (supervised, unsupervised, reinforcement learning), deep learning,
+                        neural networks, and natural language processing technologies.
                     </div>
                 </div>
-                
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
-                    <div class="faq-question" style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
+
+                <div class="faq-item"
+                    style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                    <div class="faq-question"
+                        style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
                         How does an AI consultant help my business?
                     </div>
                     <div class="faq-answer" style="padding: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
-                        An AI consultant helps address the problem with technology according to the client's business needs and pain points, providing strategic guidance and technical expertise.
+                        An AI consultant helps address the problem with technology according to the client's business
+                        needs and pain points, providing strategic guidance and technical expertise.
                     </div>
                 </div>
-                
-                <div class="faq-item" style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
-                    <div class="faq-question" style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
+
+                <div class="faq-item"
+                    style="background: white; margin-bottom: 1rem; border-radius: 0.5rem; box-shadow: var(--shadow-md);">
+                    <div class="faq-question"
+                        style="padding: 1.5rem; font-weight: 600; cursor: pointer; border-bottom: 1px solid var(--border);">
                         What's the typical cost range for AI projects?
                     </div>
                     <div class="faq-answer" style="padding: 1.5rem; color: var(--text-secondary); line-height: 1.7;">
-                        The price depends on the complexity of the project, and can range from anywhere $10,000 to $250,000, depending on scope and requirements.
+                        The price depends on the complexity of the project, and can range from anywhere $10,000 to
+                        $250,000, depending on scope and requirements.
                     </div>
                 </div>
             </div>
@@ -1010,7 +1236,8 @@
     <section class="cta-section" id="contact">
         <div class="container">
             <h2>Looking for a trusted AI and Machine Learning partner?</h2>
-            <p>Drop us a line to start your project today! As a leading AI firm, we will help you build a solution based on AI or breakthrough technologies like ChatGPT or LLMs.</p>
+            <p>Drop us a line to start your project today! As a leading AI firm, we will help you build a solution based
+                on AI or breakthrough technologies like ChatGPT or LLMs.</p>
             <div class="cta-buttons">
                 <a href="#" class="btn-primary">Get Started</a>
                 <a href="#" class="btn-secondary">Schedule Consultation</a>
@@ -1023,7 +1250,8 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h3>CollabRoot</h3>
-                <p>Leading AI consulting and development company helping businesses transform through artificial intelligence.</p>
+                <p>Leading AI consulting and development company helping businesses transform through artificial
+                    intelligence.</p>
             </div>
             <div class="footer-section">
                 <h3>Services</h3>
@@ -1041,7 +1269,7 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Email: support@collabroot.com</p>
+                <p>Email: nikhil@collabroot.com </p>
                 <!-- <p>Phone: +1 (555) 123-4567</p> -->
                 <!-- <p>Address: 123 AI Street, Tech City, TC 12345</p> -->
             </div>
@@ -1057,12 +1285,12 @@
             question.addEventListener('click', () => {
                 const answer = question.nextElementSibling;
                 const isVisible = answer.style.display === 'block';
-                
+
                 // Hide all answers
                 document.querySelectorAll('.faq-answer').forEach(ans => {
                     ans.style.display = 'none';
                 });
-                
+
                 // Show clicked answer if it wasn't visible
                 if (!isVisible) {
                     answer.style.display = 'block';
@@ -1120,8 +1348,9 @@
         });
     </script>
 </body>
+
 </html>
-                        <!-- <div class="industry-icon">📈</div>
+<!-- <div class="industry-icon">📈</div>
                         <h3>Marketing and Advertising</h3>
                     </div>
                     <ul class="industry-features">
